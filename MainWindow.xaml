@@ -1,0 +1,29 @@
+﻿<Window x:Class="FactoryDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FactoryDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Select Policy Type:"/>
+            <RadioButton Content="Vehicle Insurance" Name="VehicleRadio" Checked="VehicleRadio_Checked"/>
+            <RadioButton Content="Household Contents Insurance" Name="HouseholdRadio" Checked="HouseholdRadio_Checked"/>
+            <Label Content="Policy Details:"/>
+            <StackPanel Name="PolicyDetailsPanel" Visibility="Collapsed">
+                <Label Content="Vehicle Model:"/>
+                <TextBox Name="ModelTextBox"/>
+                <Label Content="Vehicle Color:"/>
+                <TextBox Name="ColorTextBox"/>
+                <Label Content="Year of Registration:"/>
+                <TextBox Name="YearTextBox"/>
+                <Label Content="Contents Value:" Visibility="Collapsed" Name="ContentsLabel"/>
+                <TextBox Name="ContentsTextBox" Visibility="Collapsed"/>
+                <Button Content="Create Policy" Click="CreatePolicy_Click" Margin="0,10,0,0"/>
+            </StackPanel>
+            <Label Name="ResultLabel" FontWeight="Bold" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
